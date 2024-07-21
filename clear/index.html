@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color on Button Click</title>
+    <style>
+        :root {
+            --primary-background: lightblue; /* Default background color */
+        }
+
+        body {
+            background-color: var(--primary-background);
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .switch button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .switch button img {
+            width: 50px; /* Adjust size as needed */
+            height: 50px;
+        }
+
+        /* Toggle background color when button is clicked */
+        .theme-toggle {
+            --primary-background: pink; /* New background color */
+        }
+    </style>
+</head>
+<body>
+    <div class="switch">
+        <button class="toggle-button" onclick="document.body.classList.toggle('theme-toggle')">
+            <img src="Btn Change-theme.png" class="theme" alt="Change Theme Button">
+        </button>
+    </div>
+</body>
+</html>
